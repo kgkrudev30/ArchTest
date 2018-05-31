@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.medone.rudev30.archtest.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" >
+        <action
+            android:id="@+id/action_detailFragment_to_detailActivit"
+            app:destination="@id/detailActivity" />
+    </activity>
+    <activity
+        android:id="@+id/detailActivity"
+        android:name="com.medone.rudev30.archtest.DetailActivity"
+        android:label="detail_activity"
+        tools:layout="@layout/detail_activity" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.medone.rudev30.archtest.ui.detail.DetailFragment"
+        android:label="detail_fragment"
+        tools:layout="@layout/detail_fragment" ></fragment>
+    <action android:id="@+id/action_global_mainActivity" app:destination="@id/mainActivity" app:enterAnim="@anim/nav_default_enter_anim" app:exitAnim="@anim/nav_default_exit_anim" app:popEnterAnim="@anim/nav_default_pop_enter_anim" app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+</navigation>

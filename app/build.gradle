@@ -48,5 +48,9 @@ dependencies {
     implementation "android.arch.persistence.room:rxjava2:$room_version"
     testImplementation "android.arch.persistence.room:testing:$room_version"
 
+    def dagger_version = "2.16"
+    implementation "com.google.dagger:dagger:$dagger_version"
+    annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
+
 
 }
